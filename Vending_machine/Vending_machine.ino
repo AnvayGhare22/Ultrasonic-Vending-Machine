@@ -54,7 +54,7 @@ void loop() {
   // but NOT 5000ms. 100ms is enough.
   delay(100); 
 
-  if (distance > 0 && distance <= 5.0) {
+  if (distance > 0 && distance <= 10.0) {
     dispenseProduct(); // Call the custom function below
   } 
   
@@ -68,12 +68,12 @@ void loop() {
 void dispenseProduct() {
     lcd.clear();
     lcd.setCursor(0,0);
-    lcd.print("Great! Success.");
+    lcd.print("Success!.");
     lcd.setCursor(0,1);
-    lcd.print("Enjoy your drink");
+    lcd.print("Enjoy your cookie");
     
     // Push the bottle
-    motor1.write(180); // Move to push
+    motor1.write(90); // Move to push
     delay(2000);       // Wait for bottle to drop
     
     // Return mechanism
